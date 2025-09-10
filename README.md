@@ -1,9 +1,9 @@
-# CSC207 Week 1 Lab Activity: Fizz Buzz!
+### CSC207 Week 1 Lab Activity: Fizz Buzz!
 Let's start off our exploration of Java with a classic programming challenge, Fizz Buzz!
 
 But first, let's get you your own copy of this codebase to work with.
 
-## Task 0 Forking a public repository on GitHub
+#### Task 0 Forking a public repository on GitHub
 
 You should be currently reading this README on GitHub in the code repository:
 https://github.com/CSC207-2025F-UofT/FizzBuzz/
@@ -42,14 +42,14 @@ editor+preview, or just the preview of this markdown file.
 Before we begin, note that IntelliJ is made by the same company as PyCharm, so it should feel quite familiar to you,
 with the only difference being that we'll be working with Java code instead of Python code of course!
 
-### Important Configuration Step
+##### Important Configuration Step
 
 > IntelliJ might mark the `test_files` directory to be a "sources root" by default since it contains `.java` files.
 > If that directory is blue, you will need to unmark it by right-clicking the directory,
 > scrolling down to the bottom of that menu, and selecting `Mark Directory as -> Unmark as Sources Root`.
 
 
-### Aside: getting to know Markdown
+##### Aside: getting to know Markdown
 The Markdown format is commonly used for things like readme files, as it allows for simple syntax to be incorporated,
 which enables basic typesetting when viewed while still being a plaintext format for the purposes of
 editing and version control.
@@ -62,7 +62,7 @@ Do so now for the checkbox above.
 
 And now, back to Fizz Buzz!
 
-## Fizz Buzz
+#### Fizz Buzz
 
 Fizz Buzz is a game where people sit in a circle. Counting from 1 and going around the circle,
 people say one of four things for a number `i`: `Fizz`, `Buzz`, `Fizz Buzz`, or `i`.
@@ -94,7 +94,7 @@ we continually increment. It is a classic technical interview question.
 
 Let's explore a solution written in Java.
 
-## A Java version
+#### A Java version
 
 ```java
 /**
@@ -146,7 +146,7 @@ this Fizz Buzz problem.
 
 You may never have seen Java before, but we bet you can puzzle out how it works.
 
-## Task 1: Understanding some Java syntax
+#### Task 1: Understanding some Java syntax
 
 Take a few minutes to read through this code and take guesses at what different pieces of
 the code are doing. For example, what's the Java version of Python's `and`? What's going
@@ -161,7 +161,7 @@ strike you as either similar to or different from Python.
 > using the debugger in the same way. You might find it informative to try stepping through the
 > code to see what it is doing on a few iterations.
 
-## The Main Method
+#### The Main Method
 
 In Python, any code that you write in a file will get run when you execute the file.
 This is not the case in Java. You must define a method called `main` in a class
@@ -175,19 +175,19 @@ This is the main method, the entry point of your program. You have installed Jav
 and it is, loosely speaking, a program that knows how to compile and run your program — it calls
 method `main` in the file you choose to run.
 
-### Task 1.1: Rewrite this using `while`
+##### Task 1.1: Rewrite this using `while`
 
 - [ ] You've puzzled through how Java `for` and `if` statements work; now rewrite this
 to use a `while` loop instead of a `for` loop.
 
-## How to test this code
+#### How to test this code
 
 How do you know that the code is correct? Part of the problem here is that we can't
 easily test this program. The iteration and the calculation are _tightly coupled_.
 If we refactored this by extracting the body of the loop into a method, we could
 test the calculation for several interesting numbers more easily.
 
-## Task 2: How to refactor this code using IntelliJ
+#### Task 2: How to refactor this code using IntelliJ
 
 1. Select all the lines **inside the body of the loop**. Don't include the `{` or `}`.
 
@@ -204,7 +204,7 @@ That's your first big IntelliJ trick! There are lots more.
 > something similar here — when it extracted this method, it used the `private` access modifier for the extracted method.
 > You'll learn more about the various access modifiers in your Java readings soon.
 
-### Task 2.1: Publishing your changes
+##### Task 2.1: Publishing your changes
 
 Now that you've made your first edits to your code, you should ask git to save these changes for you.
 
@@ -254,7 +254,7 @@ commits at once. As you work through the lab today, we encourage you to practice
 
 Now, back to exploring the code!
 
-## Task 3: Seeing private in action
+#### Task 3: Seeing private in action
 
 To briefly observe what private does, let's create a new class.
 
@@ -271,7 +271,7 @@ appear in the autocomplete, but `FizzBuzz.main` does! If you wanted to be able t
 inside `Main.java`, you would need to change the access modifier on the helper.
 It turns out that IntelliJ can help us out with this too!
 
-### Task 3.1: Changing access modifiers using IntelliJ
+##### Task 3.1: Changing access modifiers using IntelliJ
 
 - [ ] In your main method in `Main.java`, try making a call to your private helper — something like `FizzBuzz.doFizzBuzz(5);`.
 
@@ -287,7 +287,7 @@ These will be explained in more detail in your readings, but for now we can just
 - [ ] Choose this fix and the error will go away. Try running `Main.java` to see if it outputs
 what you expect.
 
-### Task 3.2: Calling `FizzBuzz.main` from `Main.main`
+##### Task 3.2: Calling `FizzBuzz.main` from `Main.main`
 
 Suppose we wanted to execute a line like `FizzBuzz.main();` in `Main.main`. Why doesn't this work?
 
@@ -301,12 +301,12 @@ think about how they differ and which might be best.
 And that's all we wanted to highlight with this first example. You'll see and learn much more Java syntax as you work
 through readings and coding exercises over the next few weeks.
 
-### Task 3.3 Push your latest changes
+##### Task 3.3 Push your latest changes
 
 - [ ] Now that you've made some more changes to your repository, you should repeat the add, commit, and push process
 for any files that you have changed if you haven't done so recently. Remember to include a descriptive commit message!
 
-### Task 3.4 Pulling changes from GitHub
+##### Task 3.4 Pulling changes from GitHub
 
 So far we have only talked about how to *push local changes* to a remote repository on GitHub. In practice, several
 programmers will often be working in the same remote repository. So when one programmer pushes their changes, everyone
@@ -334,7 +334,7 @@ your local repository.
 
 Let's move on to a couple more small programming challenges for you to try out, which are similar to Fizz Buzz.
 
-# Technical interviews  (and Java practice)
+### Technical interviews  (and Java practice)
 
 Technical interviews for developer internships often have you write
 some code. They usually test first-year and second-year material, and many students
@@ -343,7 +343,7 @@ practice these kinds of problems regularly over the academic year to gain confid
 As part of this week's lab, you'll solve one of them, and submit your code
 on MarkUs to get practice with running the self tests on MarkUs.
 
-## Task 4: Multiples of 3 and 5
+#### Task 4: Multiples of 3 and 5
 
 - [ ] Right-click on `lab1` and select `New —> Java Class`. Name it `Multiples`.
 
@@ -359,7 +359,7 @@ Add this file to your project, commit, and push. Check your repo on GitHub to co
 If you don't get the right answer immediately, that's okay! Discuss with your team to ensure everyone
 is happy with their own code for this.
 
-### Task 4.1: Testing Multiples
+##### Task 4.1: Testing Multiples
 
 Now, let's modify your code so that it is easy to test.
 
@@ -428,7 +428,7 @@ your code to run the tests on.
 > what the issue is.
 
 
-### Task 4.2: Overloading `multiples`
+##### Task 4.2: Overloading `multiples`
 
 Unlike Python, Java allows us to define multiple methods with the same name,
 but with different numbers and types of parameters. This is called **overloading** and is discussed in the readings.
@@ -466,16 +466,16 @@ and run the tests in it to check your work — debugging as needed.
 
 And that's it for the first lab activity of the term!
 
-# Bonus activities
+### Bonus activities
 There are some additional exercises below for your team to work through if you have time,
 but the above was the core activity for this week.
 
-## Checking your logs
+#### Checking your logs
 
 - [ ] Check with your team to see how many commits you each made during the lab in your FizzBuzz repo.
   You can view the log of commits on GitHub or use the `git log` command to view a summary of the commits to the repository.
 
-## Bonus: Collaboration with git (only if you have time)
+#### Bonus: Collaboration with git (only if you have time)
 
 If your team has time left in the lab, you might try experimenting with how git works when you have
 a shared repository with multiple people contributing code. We'll be doing some similar exercises in
@@ -485,7 +485,7 @@ the next labs, as this will be important when you work on your projects, so this
 
 We'll briefly summarize two approaches you might take for this:
 
-### Forking and requesting to make a contribution
+##### Forking and requesting to make a contribution
 
 1. Share your FizzBuzz GitHub repository URL with another student in the class.
 
@@ -500,7 +500,7 @@ you are requesting that, roughly speaking, the original repository do a `git pul
 more about pull requests later, but feel free to try it out now by following the instructions that
 appear when you click the button to contribute.
 
-### Giving someone else direct access to your GitHub repository
+##### Giving someone else direct access to your GitHub repository
 
 1. Click on the Settings tab for your repository on GitHub (the right-most tab).
   In it, there is a Collaborators tab (top-left). Click on it and then you will see a button
@@ -515,7 +515,7 @@ and try to push, there may be conflicting changes which need to be resolved. As 
 git does a pretty good job telling you what is wrong and can help you resolve any conflicts. We'll talk more about
 this later, as well as other features of git which can help you avoid conflicts.
 
-## Bonus: Reduce a number to 0
+#### Bonus: Reduce a number to 0
 
 Here is one more small coding problem similar to the Multiples problem for extra practice.
 
@@ -538,7 +538,7 @@ and run the tests — debugging as needed.
 
 - [ ] Finally, `add`, `commit`, and `push` your `Reduce.java` — then rerun the self tests on MarkUs.
 
-## Further practice
+#### Further practice
 
 [LeetCode](https://leetcode.com) is a very popular source of practice problems.
 [CoderByte](https://www.coderbyte.com/) is another.
@@ -548,7 +548,7 @@ problems is a great way to practice Java or any other new language you later wan
 This term, you might find it interesting to try solving some problems first in Python and then in Java.
 
 
-## Extra to think about
+#### Extra to think about
 
 What is the runtime of your solution for the Multiples problem, in terms of `n`?
 We aren't testing your code for efficiency in this assignment, but if your solution is linear in `n`, then
